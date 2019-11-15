@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+    
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
@@ -181,7 +182,28 @@ onblur="this.placeholder = 'Password'">
  <a href="index.html" id="a1"> <span class="spn1"> Go To Homepage</span> </a>
   </form>
 	</div> 
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyATn5eBgfN8E8SA4noAr1EclwozIc14EcA",
+    authDomain: "busio-36ca9.firebaseapp.com",
+    databaseURL: "https://busio-36ca9.firebaseio.com",
+    projectId: "busio-36ca9",
+    storageBucket: "busio-36ca9.appspot.com",
+    messagingSenderId: "776507798986",
+    appId: "1:776507798986:web:332aa7c7829bd20c8d4b33",
+    measurementId: "G-J7KD6BTMZF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 <script>  
 function validate()  
