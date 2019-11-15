@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Offer</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+	<style type="text/css">
+	.div1{
+		height: 180vh;
+		width: 100%;
+		
+	}
+	.div2{
+		height: 16vh;
+		width: 100%;
+	}
+	.div3{
+		height: 16vh;
+		width: 20%;
+		float: left;
+	}
+	.div3 img{
+		margin-left: 14%;
+		margin-top: 10%;
+	}
+	.div4{
+		height: 12vh;
+		width: 48%;
+		float: right;
+		padding-top: 2%;
+	}
+	.div4 i{
+		margin-top: 3%;
+		color: #4FC3F7;
+	}
+	.div4 a{
+		text-decoration: none;
+	}
+	.spn1{
+		font-family: 'McLaren', cursive;
+		font-size: 20px;
+		color: #4FC3F7;
+		margin-left: 10%;
+	}
+	.spn2{
+		font-family: 'McLaren', cursive;
+		font-size: 20px;
+		color: #4FC3F7;
+		margin-left: 3%;
+	}
+	.div5{
+		height: 10vh;
+		width: 100%;
+	
+	}
+	.spn3{
+		font-size: 20px;
+		margin-left: 6%;
+		font-family: 'McLaren', cursive;	
+
+	}
+	.div6{
+		height: 77vh;
+		width: 40%;
+		margin-left: 6%;
+		float: left;
+		border:1px solid #CFD8DC;
+	}
+	.div7{
+		height: 6vh;
+		width: 100%;
+		background-color: white;
+		border:1px #CFD8DC;
+		margin-top: 2%;
+		display: none;
+	}
+	.spn4{
+		font-size: 15px;
+		margin-left: 4%;
+		margin-top: 3%;
+		font-family: 'McLaren', cursive;
+
+	}
+	.div8{
+		height: 35vh;
+		width: 100%;
+		background-color: #ECEFF1;
+		border:1px solid #CFD8DC;
+		padding-bottom: 3%;
+	}
+	.spn5{
+		font-size: 15px;
+		margin-left: 4%;
+		font-family: 'McLaren', cursive;
+	}
+	input[type=text], input[type=date]{
+		height: 4vh;
+		width: 60%;
+		margin-left: 4%;
+		margin-top: 1%;
+		-webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+	}
+	input[type=text]:focus, input[type=date]:focus{
+  box-shadow: 0 0 5px #29B6F6;
+  
+  border: 1px  solid #29B6F6;
+}	
+
+.btn1{
+	height: 5vh;
+	width: 20%;
+	border: none;
+	border-radius: 8px;
+	margin-left: 70%;
+	margin-top: 4%;
+	font-size: 18px;
+	color: white;
+	background-color: #29B6F6;
+}
+
+.div9{
+	height: 43vh;
+	width: 26.5%;
+	margin-right: 25%;
+	float: right;
+	border: 1px solid #CFD8DC;
+}
+
+
+
+	</style>
+</head>
+<body>
+<div class="div1">
+	<div class="div2">
+		<div class="div3">
+			<img src="logo.png" height="40px" width="180px">
+		</div>
+		<div class="div4">
+			<a href="index.html"> <span class="spn1"> Home </span></a>
+			<a href="findaride.html"> <span class="spn1"> Find a ride </span> </a>
+			<i class="fas fa-search"></i>
+			<a href="Offer.html">  <span class="spn2"> Offer a ride </span> </a>
+			<i class="far fa-plus-square"></i>
+			<a href="signup.html"> <span class="spn2">Sign Up</span> </a>
+			<a href="signin.html"> <span class="spn2">Sign In</span> </a>
+		</div>
+	</div>
+	<div class="div5">
+		<p class="spn3"> Offer a ride on your next long journey</p>
+	</div>
+	<div class="div6">
+		<div class="div7">
+			<p class="spn4"> Pick-up and drop-off points</p>
+		</div>
+		<div class="div8">
+			<br>
+	    <span class="spn5"> Pick Up </span> <br>
+	    <input type="text" name="pickup city" placeholder="Your departure point(address,city,station..." id="p"> <br> <br>
+	    <span class="spn5"> Drop Off </span> <br>
+	    <input type="text" name="drop-off" placeholder="Your arrival point(address,city,station..." id="p1"> <br> <br>
+	    <span class="spn5"> Stopovers </span> <br>
+	    <span class="spn5">
+	    	We are offering to pick up and drop off co-travellers.
+	    </span> <br>
+	     <input type="text" name="drop-off" placeholder="Your arrival point(address,city,station..." id="p2">
+		</div>
+			<div class="div7">
+			<p class="spn4"> Date </p>
+		</div>
+		<div class="div8">
+			<br> <br>
+		<span class="spn5">
+			Departure date:
+		</span> <br>
+		<input type="date" name="Date"> <br> <br>
+		<span class="spn5">
+			Return Date
+		</span> <br>
+		<input type="date" name="Date"> <br>
+		<button class="btn1" onclick="submit()">
+			Continue
+		</button>
+		</div>
+
+	</div>
+	<div class="div9">
+		<span class="spn5" style="color: #BDBDBD">
+			My Ride Summary
+		</span> <br> <br>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28879.4233131294!2d75.76538721543604!3d26.89799958027132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1573589771906!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	function submit()
+	{
+	var a = document.getElementById("p").value;
+	var b = document.getElementById("p1").value;
+	var c = document.getElementById("p2").value;
+	if(a=="")
+	{
+		alert("Pick-up cant be empty");
+	}
+	else if(b=="")
+	{
+	    alert("drop off cant be empty");	
+	}
+	else if(c=="")
+	{
+		alert("Stopovers cant be empty");
+	}
+	else {
+		alert("Your pickup is" +a+" , Your drop off point is"+b+" and Your Stopovers is"+c);
+		}
+	}
+</script>
+</html>

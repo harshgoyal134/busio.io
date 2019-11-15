@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find a Ride</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+	<style type="text/css">
+	.div1{
+		height: 180vh;
+		width: 100%;
+			
+		
+	}
+	.div2{
+		height: 16vh;
+		width: 100%;
+	}
+	.div3{
+		height: 16vh;
+		width: 20%;
+		float: left;
+	}
+	.div3 img{
+		margin-left: 14%;
+		margin-top: 10%;
+	}
+	.div4{
+		height: 12vh;
+		width: 48%;
+		float: right;
+		padding-top: 2%;
+
+	}
+	.div4 i{
+		margin-top: 3%;
+		color: #4FC3F7;
+	}
+	.div4 a{
+			text-decoration: none;
+	}
+	.spn1{
+		font-family: 'McLaren', cursive;
+		font-size: 20px;
+		color: #4FC3F7;
+		margin-left: 10%;
+	}
+	.spn2{
+		font-family: 'McLaren', cursive;
+		font-size: 20px;
+		color: #4FC3F7;
+		margin-left: 3%;
+	}
+	.div5{
+		height: 45vh;
+		width: 60%;
+		margin-left: 20%;
+		margin-top: 5%;
+	
+	
+	}
+	input[type=text],input[type=date]{
+		height: 5vh;
+		width: 50%;
+		margin-left: 25%;
+		border-radius: 12px;
+		border-color: #EEEEEE;
+		border-right: none;
+		border-top: none;
+		border-left: none;
+		background-color: #EEEEEE;
+		}
+	.spn3{
+		  font-family: 'McLaren', cursive;
+		font-size: 30px;
+		margin-left: 41%;
+
+	}
+	::placeholder{
+		font-size: 20px;
+		color: red;
+		text-align: center;
+		font-family: 'McLaren', cursive;
+	}
+	.btn{
+		height: 5vh;
+	width: 20%;
+	border: none;
+	border-radius: 8px;
+	margin-left: 40%;
+	margin-top: 4%;
+	font-size: 18px;
+	color: white;
+	background-color: #29B6F6;
+	}
+	.btn:hover{
+	background-color: #039BE5;
+}
+
+</style>
+<body>
+	<div class="div1">
+	<div class="div2">
+		<div class="div3">
+			<img src="logo.png" height="40px" width="180px">
+		</div>
+		<div class="div4">
+			<a href="index.html"> <span class="spn1"> Home </span></a>
+			<a href="findaride.html"> <span class="spn1"> Find a ride </span> </a>
+			<i class="fas fa-search"></i>
+			<a href="Offer.html">  <span class="spn2"> Offer a ride </span> </a>
+			<i class="far fa-plus-square"></i>
+			<a href="signup.html"> <span class="spn2">Sign Up</span> </a>
+			<a href="signin.html"> <span class="spn2">Sign In</span> </a>
+		</div>
+			
+	</div>
+	<div class="div5">
+		<span class="spn3">
+			Find a ride <br> <br>
+		</span>
+				<input type="text" name="leavingfrom" placeholder="Leavingfrom" id="lf"> <br> <br>
+				<input type="text" name="Goingto" placeholder="Going To" id="gt"> <br> <br>
+				<input type="date" name="date" id="l"> <br>
+				<button class="btn" onclick="submit()"> Find </button>
+			</div>
+</div>
+</body>
+<script type="text/javascript">
+	function submit() {
+		var a= document.getElementById("lf").value;
+		var b=document.getElementById("gt").value;
+		var c= document.getElementById("l").value;
+		if(a=="")
+		{
+			alert("Please enter Leaving City")
+		}
+		else if (b=="") {
+			alert("Please enter Destination city");
+		}
+		else if(c=="")
+		alert("Thank you  your Ride is Booked from"+a+" to "+b );
+	}
+</script>
+</html>

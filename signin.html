@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignIn</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"    >
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin:0px;
+
+			background-image: linear-gradient(to top, rgba(24, 255, 255,0.53), rgba(48, 79, 254,0.10)),
+			 url("bg12.png");
+	background-size: cover;
+	
+
+	justify-content: center;
+	overflow: hidden;
+
+
+		
+		}
+         .div1{
+             height: 100vh;
+         	width: 100%;
+         	
+
+         }
+         .div2{
+         	height: 40vh;
+         	width: 28%;
+         	margin-left: 36%;
+         	margin-top:  3%;
+         	border-radius: 12px;
+            background-color: white;
+           
+           
+         }
+         h1{
+         	text-align: center;
+         	color: white;
+         	padding-top: 8%;
+         	margin-right: 1%;
+         	font-family: 'Concert One', cursive;
+         }
+         input[type=text]{
+         	border: none;
+         	border-bottom: 1px solid #BDBDBD;
+         	outline-width: 0;
+         	height: 10vh;
+         	width: 100%;
+         	outline-width: 0;
+         	text-align: center;
+         	font-size: 24px;
+         		font-family: 'Concert One', cursive;
+         		margin-top: 1%;
+         		border-radius: 12px;
+        
+         }
+         .div2 i{
+         	margin-left: 2%;
+         	margin-top: 2%;
+         	position: absolute;
+         }
+         ::placeholder{
+         	font-size: 25px;
+         	font-family: 'Concert One', cursive;
+         	color: #757575;
+
+         	text-align: center;
+         	padding-right: 30%;
+         }
+         input[type=password]{
+         	border: none;
+         	border-bottom: 1px solid #BDBDBD;
+         	outline-width: 0;
+         	height: 10vh;
+         	width: 100%;
+         	text-align: center;
+         	font-size: 24px;
+         		font-family: 'Concert One', cursive;
+         		margin-top: 2%;
+         		border-radius: 12px;
+            
+         }
+         .btn{
+         	height: 5vh;
+         	width: 30%;
+background-color: #f6d327;
+background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+
+            color: white;
+            border: none;
+            margin-top: 8%;
+            margin-left: 32%;
+            border-radius: 12px;
+            font-family: 'Concert One', cursive;
+            font-size: 20px;
+            transition: 0.4s;
+
+
+         }
+         .btn:hover{
+         	background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+         	height: 5.4vh;
+         }
+          @media(min-width: 320px) and (max-width: 980px){
+            .div2{
+                width: 70%;
+                height: 38vh;
+                margin-left: 18%;
+            }
+            .btn{
+                width: 33%;
+            }
+            h1{
+                font-size: 30px;
+                margin-right: 8%;
+            }
+            .div2 i{
+                margin-top: 9%;
+            }
+         }
+	</style>
+</head>
+<body>
+<div class="div1">
+	<h1>ACCOUNT LOGIN</h1>
+	<div class="div2">
+		<form name="myform"  method="post" action="#" onsubmit="return validateemail();">  
+		<i class="fas fa-user"></i>	
+     <input type="text" name="email" placeholder="E-mail" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'E-mail'">
+        <i class="fas fa-lock"></i>
+         <input type="password" name="password" placeholder="Password" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'Password'">
+<input type="submit" value="LOGIN" class="btn">
+  </form>
+	</div>
+
+</div>
+</body>
+<script>  
+function validateemail()  
+{  
+var x=document.myform.email.value;
+var y=document.myform.password.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+  else if(y==""){
+  	alert("Password cannot be Null")
+  }
+  else{
+  	alert("You are have been Successfully LOGIN")
+  }
+}
+</script>  
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<head>
+	<title>SignUp</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin:0px;
+
+			background-image: linear-gradient(to top, rgba(24, 255, 255,0.53), rgba(48, 79, 254,0.10)),
+			 url("bg12.png");
+	background-size: cover;
+	
+
+	justify-content: center;
+	overflow: hidden;
+
+
+		
+		}
+         .div1{
+             height: 100vh;
+         	width: 100%;
+         	
+
+         }
+         .div2{
+         	height: 60vh;
+         	width: 28%;
+         	margin-left: 36%;
+         	margin-top:  2%;
+         	border-radius: 12px;
+            background-color: white;
+           
+           
+         }
+         h1{
+         	text-align: center;
+         	color: white;
+         	padding-top: 3%;
+         	margin-right: 1%;
+         	font-family: 'Concert One', cursive;
+         }
+         input[type=text]{
+         	border: none;
+         	border-bottom: 1px solid #BDBDBD;
+         	outline-width: 0;
+         	height: 10vh;
+         	width: 100%;
+         	outline-width: 0;
+         	text-align: center;
+         	font-size: 24px;
+         		font-family: 'Concert One', cursive;
+         		margin-top: 1%;
+         		border-radius: 12px;
+        
+         }
+         .div2 i{
+         	margin-left: 2%;
+         	margin-top: 2%;
+         	position: absolute;
+         }
+         ::placeholder{
+         	font-size: 25px;
+         	font-family: 'Concert One', cursive;
+         	color: #757575;
+
+         	text-align: center;
+         	padding-right: 10%;
+         }
+         input[type=password]{
+         	border: none;
+         	border-bottom: 1px solid #BDBDBD;
+         	outline-width: 0;
+         	height: 10vh;
+         	width: 100%;
+         	text-align: center;
+         	font-size: 24px;
+         		font-family: 'Concert One', cursive;
+         		margin-top: 2%;
+         		border-radius: 12px;
+            
+         }
+         input[type=number]{
+            border: none;
+            border-bottom: 1px solid #BDBDBD;
+            outline-width: 0;
+            height: 10vh;
+            width: 100%;
+            outline-width: 0;
+            text-align: center;
+            font-size: 24px;
+                font-family: 'Concert One', cursive;
+                margin-top: 1%;
+                border-radius: 12px;
+        
+         }
+         .btn{
+         	height: 5vh;
+         	width: 30%;
+background-color: #f6d327;
+background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+
+            color: white;
+            border: none;
+            margin-top: 8%;
+            margin-left: 32%;
+            border-radius: 12px;
+            font-family: 'Concert One', cursive;
+            font-size: 20px;
+            transition: 0.4s;
+
+
+         }
+         form a{
+            text-decoration: none;
+         }
+         .btn:hover{
+         	background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+         	height: 5.4vh;
+         }
+         .spn1{
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            margin-left: 32%;
+            margin-top: 2%;
+             font-family: 'Concert One', cursive;
+         }
+         #id{
+            text-decoration: none;
+         }
+         @media(min-width: 320px) and (max-width: 980px){
+            .div2{
+                width: 70%;
+                height: 60vh;
+                margin-left: 17%;
+            }
+            .btn{
+                width: 33%;
+            }
+            h1{
+                font-size: 28px;
+            }
+            .div2 i{
+                margin-top: 8%;
+            }
+         }
+	</style>
+</head>
+<body>
+<div class="div1">
+	<h1>ACCOUNT SIGNUP</h1>
+	<div class="div2">
+		<form name="myform"  method="post" action="#" onsubmit="return validate();">  
+		<i class="fas fa-user"></i>	
+     <input type="text" name="Name" placeholder="Name" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'Name'">
+   <i class="fas fa-mobile-alt"></i>
+   <input type="number" name="number" placeholder="PhoneNumber" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'PhoneNumber'" maxlength="10">
+<i class="fas fa-envelope-open"></i>
+ <input type="text" name="email" placeholder="E-Mail" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'E-Mail'">
+        <i class="fas fa-lock"></i>
+         <input type="password" name="password" placeholder="Password" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'Password'">
+<input type="submit" value="SIGNUP" class="btn"> <br>
+ <a href="index.html" id="a1"> <span class="spn1"> Go To Homepage</span> </a>
+  </form>
+	</div> 
+
+</body>
+<script>  
+function validate()  
+{ 
+var z= document.myform.Name.value;
+var a=document.myform.number.value; 
+var x=document.myform.email.value;
+var y=document.myform.password.value;
+
+ 
+var g=document.myform.number.length; 
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf("."); 
+  if (z=="") {
+    alert("Name cannot be Null");
+  } 
+  else if (a=="") {
+    alert("Please enter PhoneNumber");
+  }
+ else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);    
+  }  
+  else if(y==""){
+  	alert("Password cannot be Null");
+  }
+ else if (g>10) {
+    alert("PhoneNumber not valid");
+  }
+  else{
+  	alert("You are now Signed up for Busio ! Thank You");
+  }
+}
+</script>  
+</html>
